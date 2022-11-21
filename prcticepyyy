@@ -1,0 +1,48 @@
+while True:
+    bag = ["Health Potion", "Mana Potion"]
+    j = "inside the bag are"
+    i = "what do you want to use"
+    h = "Health Potion"
+    m = "Mana Potion"
+    userChoice = input("Do you want to use something inside your bag?\n1.Yes\n2.No\n->")
+    pass
+    if userChoice == "1":
+        print(j+":")
+        for x in bag:
+            print(x)
+        useItem = input("\n"+i + "\n1." + h + "\n2." + m+"\n->")
+        if useItem == "1":
+            bag.pop(0)
+            print("\nYou use the",h)
+            print("the only thing inside your bag is:")
+            for x in bag:
+                print(x)
+            useLastItem = input("do you want to use the last item?\n1.Yes\n2.No\n->")
+            if useLastItem == "1":
+                print("\nyour bag is empty\nBYE!!")
+                break
+            elif useLastItem =="2":
+                print("you still have the "+m)
+                break
+        elif useItem == "2":
+            bag.pop(1)
+            print("\nYou use the",m)
+            print("the only thing inside your bag is: ")
+            for x in bag:
+                print(x)
+            useLastItem = input("do you want to use the last item?\n1.Yes\n2.No\n->")
+            if useLastItem == "1":
+                print("\nyour bag is empty\nBYE!!")
+                break
+            elif useLastItem =="2":
+                print("you still have the "+h)
+                break
+
+
+
+
+    elif userChoice == "2":
+        print("Bye!")
+        break
+    else:
+        print("Invalid Input, Please enter a number!")
