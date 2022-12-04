@@ -24,5 +24,5 @@ while True:
     if i == 1:
         game()
     else:
-        print("k bye")
+        print("Thank You for Playing!")
         break
